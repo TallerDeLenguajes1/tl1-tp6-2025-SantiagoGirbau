@@ -6,7 +6,7 @@ float b;
 string input;
 do
 {
-    Console.WriteLine("Escriba la operación a realizar suma, resta, mult, div o exit para salir \n");
+    Console.WriteLine("Escriba la operación a realizar suma, resta, mult, div, abs o exit para salir \n");
     input = Console.ReadLine();
     switch (input)
     {
@@ -33,6 +33,10 @@ do
             }else{
             Console.WriteLine("Resultado = "+ division(a,b));
             }
+            break;
+        case "abs":
+            a=LeerNumero();
+            Console.WriteLine("Resultado = "+ abs(a));
             break;
         case "exit":
             break;
@@ -72,4 +76,12 @@ float multiplicacion(float a, float b){
 float division(float a, float b){
     
     return a/b;
+}
+
+float abs(float a){
+    if(a>=0){
+        return a;
+    }else{
+        return (-a);
+    }
 }
