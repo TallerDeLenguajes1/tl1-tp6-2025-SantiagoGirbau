@@ -6,7 +6,7 @@ float b;
 string input;
 do
 {
-    Console.WriteLine("Escriba la operación a realizar suma, resta, mult, div, abs o exit para salir \n");
+    Console.WriteLine("Escriba la operación a realizar suma, resta, mult, div, abs, cuad, raiz o exit para salir \n");
     input = Console.ReadLine();
     switch (input)
     {
@@ -37,6 +37,14 @@ do
         case "abs":
             a=LeerNumero();
             Console.WriteLine("Resultado = "+ abs(a));
+            break;
+        case "cuad":
+            a=LeerNumero();
+            Console.WriteLine("Resultado = "+ cuadrado(a));
+            break;
+        case "sqrt":
+            a=LeerNumero();
+            Console.WriteLine("Resultado = "+ raizCuadrada(a));
             break;
         case "exit":
             break;
@@ -84,4 +92,25 @@ float abs(float a){
     }else{
         return (-a);
     }
+}
+
+float cuadrado(float a){
+    return a*a;
+}
+
+float raizCuadrada(float a){
+    // return Math.sqrt(a);
+    return 0;
+}
+
+float seno(float a){
+    return 0;
+}
+
+float coseno(float a){
+    return 0;
+}
+
+int parteEntera(float a){
+    return (int)a;
 }
