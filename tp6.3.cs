@@ -93,24 +93,3 @@ float abs(float a){
         return (-a);
     }
 }
-
-float cuadrado(float a){
-    return a*a;
-}
-
-float raizCuadrada(float a){
-    // return Math.sqrt(a);
-    return 0;
-}
-
-float seno(float a){
-    return 0;
-}
-
-float coseno(float a){
-    return 0;
-}
-
-int parteEntera(float a){
-    return (int)a;
-}
