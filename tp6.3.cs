@@ -38,11 +38,7 @@ do
             }
             break;
         case "V2":
-            a = LeerNumero();
-            Console.WriteLine("Resultado = " + raizCuadrada(a));
-            break;
             Console.WriteLine("Escriba un numero para calcular el ABS, CUADRADO, RAÍZ, SENO COSENO y PARTE REAL:\n");
-
             a = LeerNumero();
 
             Console.WriteLine("Valor Absoluto = " + abs(a));
@@ -122,6 +118,18 @@ float division(float a, float b)
 float cuadrado(float a)
 {
     return a * a;
+}
+
+float abs(float a)
+{
+    if (a >= 0)
+    {
+        return a;
+    }
+    else
+    {
+        return (-a);
+    }
 }
 
 double raizCuadrada(float a)
