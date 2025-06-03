@@ -2,6 +2,25 @@
 float a;
 float b;
 
+string input1;
+string input2;
+
+Console.WriteLine("Escriba un string: \n");
+    input1 = Console.ReadLine();
+
+    Console.WriteLine(input1.Length);
+
+    Console.WriteLine("Escriba otro string: \n");
+    input2 = Console.ReadLine();
+
+string concat = input1 + input2;
+
+    Console.WriteLine("Resultado: "+ concat);
+
+Console.WriteLine("Escriba un numero para obtener un substring: \n");
+int pillar = LeerNumero();
+string resultado = concat.Substring(pillar);
+Console.WriteLine("Se obtuvo: " + resultado);
 
 string input;
 do
@@ -13,17 +32,17 @@ do
         case "suma":
             a = LeerNumero();
             b = LeerNumero();
-            Console.WriteLine("Resultado = " + suma(a, b));
+            Console.WriteLine($"Resultado de la suma entre {a} y {b} es " + suma(a, b).ToString());
             break;
         case "resta":
             a = LeerNumero();
             b = LeerNumero();
-            Console.WriteLine("Resultado = " + resta(a, b));
+            Console.WriteLine($"Resultado de la resta entre {a} y {b} es " + resta(a, b));
             break;
         case "mult":
             a = LeerNumero();
             b = LeerNumero();
-            Console.WriteLine("Resultado = " + multiplicacion(a, b));
+            Console.WriteLine($"Resultado del producto entre {a} y {b} es " + multiplicacion(a, b));
             break;
         case "div":
             a = LeerNumero();
@@ -34,7 +53,7 @@ do
             }
             else
             {
-                Console.WriteLine("Resultado = " + division(a, b));
+                Console.WriteLine($"Resultado del cociente entre {a} y {b} es " + division(a, b));
             }
             break;
         case "V2":
@@ -76,16 +95,36 @@ do
     }
 } while (input != "exit");
 
-
-
-float LeerNumero()
+foreach (var letra in resultado)
 {
-    float a;
+    Console.WriteLine(letra);
+}
+
+resultado = resultado.ToUpper();
+Console.WriteLine("Mayusculas: " + resultado);
+resultado = resultado.ToLower();
+Console.WriteLine("Minusculas: " + resultado);
+
+Console.WriteLine("Escriba una cadena para separar en los espacios:");
+
+input1 = Console.ReadLine();
+
+string[] separado = input1.Split(' ');
+
+foreach (var palabra in separado)
+{
+    Console.WriteLine(palabra);
+}
+
+
+int LeerNumero()
+{
+    int a;
     bool Resultado;
     do
     {
         Console.WriteLine("Escriba un numero: ");
-        Resultado = float.TryParse(Console.ReadLine(), out a);
+        Resultado = int.TryParse(Console.ReadLine(), out a);
         if (!Resultado)
         {
             Console.WriteLine("No es un número válido");
